@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class Program {
+public class TwoSum {
     public static int[] TwoNumberSum1(int[] array, int targetSum) {
         for(int i = 0; i < array.Length; i++) {
             for(int j = 0; j < array.Length; j++) {

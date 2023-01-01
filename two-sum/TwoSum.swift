@@ -1,4 +1,4 @@
-class Program {
+class TwoSum {
   func twoNumberSum1(_ array: inout [Int], _ targetSum: Int) -> [Int] {
     for (key, value) in array.enumerated() {
       for (subKey, subValue) in array.enumerated() {
