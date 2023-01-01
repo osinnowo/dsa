@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Program {
-  public static int[] twoNumberSum(int[] array, int targetSum) {
+  public static int[] twoNumberSum1(int[] array, int targetSum) {
       for(int i = 0; i < array.length; i++) {
         for(int j = 0; j < array.length; j++) {
           if(j == i) continue;
@@ -12,7 +12,7 @@ class Program {
       return new int[0];
   }
 
-  public static int[] twoNumberSum(int[] array, int targetSum) {
+  public static int[] twoNumberSum2(int[] array, int targetSum) {
       for(int i = 0; i < array.length; i++) {
         for(int j = i + 1; j < array.length; j++) {
           int sum = array[i] + array[j];
@@ -24,7 +24,7 @@ class Program {
     return new int[] {};
   }
 
-  public static int[] twoNumberSum(int[] array, int targetSum) {
+  public static int[] twoNumberSum3(int[] array, int targetSum) {
     Set<Integer> set = new HashSet<Integer>();
     int index = 0;
     while(index < array.length) {
@@ -36,7 +36,7 @@ class Program {
     return new int[0];
   }
 
-  public static int[] twoNumberSum(int[] array, int targetSum) {
+  public static int[] twoNumberSum4(int[] array, int targetSum) {
     Map<Integer, Integer> map = new HashMap<>();
     int index = 0;
     while(index < array.length) {
@@ -48,7 +48,7 @@ class Program {
     return new int[0];
   }
 
-  public static int[] twoNumberSum(int[] array, int targetSum) {
+  public static int[] twoNumberSum5(int[] array, int targetSum) {
     Arrays.sort(array);
     int left = 0;
     int right = array.length - 1;
