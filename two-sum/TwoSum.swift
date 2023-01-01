@@ -44,7 +44,7 @@ class Program {
     return []
   }
 
-  func twoNumberSum(_ array: inout [Int], _ targetSum: Int) -> [Int] {
+  func twoNumberSum5(_ array: inout [Int], _ targetSum: Int) -> [Int] {
     array.sort()
     var left = 0
     var right = array.count - 1
