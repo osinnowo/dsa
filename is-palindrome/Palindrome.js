@@ -9,7 +9,7 @@ function palindrome1(str) {
     return true;
 }
 
-function palindrome(str) {
+function palindrome2(str) {
     let left = 0;
     let right = str.length - 1;
     while(left < right) {
