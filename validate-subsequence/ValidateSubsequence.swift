@@ -49,8 +49,4 @@ class ValidateSubsequence {
         }
         return list.isEmpty
     }
-
-    static func isValidSubsequence5(_ array: [Int], _ sequence: [Int]) -> Bool { 
-        
-    }
 }
