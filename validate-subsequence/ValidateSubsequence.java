@@ -55,4 +55,15 @@ public class ValidateSubsequence {
         }
         return stack.isEmpty();
     }
+
+    public static boolean isValidSubsequence6(List<Integer> array, List<Integer> sequence) { 
+        Queue<Integer> queue = new LinkedList<>(sequence);
+        int index = 0;
+        while(index < array.size()) {
+            if(queue.isEmpty()) break;
+            if(array.get(index).equals(queue.peek())) { queue.poll(); }
+          index++;
+        }
+        return queue.isEmpty();
+    }
 }
