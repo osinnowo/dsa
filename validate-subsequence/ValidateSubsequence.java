@@ -44,4 +44,15 @@ public class ValidateSubsequence {
         }
         return numbers.isEmpty();
     }
+
+    public static boolean isValidSubsequence5(List<Integer> array, List<Integer> sequence) {
+        Stack<Integer> stack = new Stack<>(); stack.addAll(sequence);
+        int index = 0;
+        while(index < array.size()) {
+            if(stack.isEmpty()) break;
+            if(array.get(array.size() - index - 1).equals(stack.peek())) { stack.pop(); }
+            index++;
+        }
+        return stack.isEmpty();
+    }
 }
