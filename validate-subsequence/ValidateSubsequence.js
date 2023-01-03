@@ -38,4 +38,4 @@ function isValidSubsequence1(array, sequence) {
     return sequence.length === 0;
   }
 
-  exports.isValidSubsequence = isValidSubsequence;
+  exports.isValidSubsequence = isValidSubsequence4;
