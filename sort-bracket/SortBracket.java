@@ -33,4 +33,24 @@ public class SortBracket {
         }
         return sb.toString();
     }
+
+    public static String sortBracket3(String str) {
+        char[] characters = str.toCharArray();
+        int left = 0;
+        int right = characters.length - 1;
+        while(left < right) {
+            if(characters[left] == '(') { left++; continue; }
+            while(left < right) {
+                if(characters[right] == '(') {
+                    char temp = characters[left];
+                    characters[left] = characters[right];
+                    characters[right] = temp;
+                    left++; right--;
+                    break;
+                }
+                right--;
+            }
+        }
+        return new String();
+    }
 }
