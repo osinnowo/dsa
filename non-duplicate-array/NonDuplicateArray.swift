@@ -1,7 +1,7 @@
 import Foundation
 
 class NonDuplicate {
-    func nonDuplicate(array: inout [Int]) -> [Int] {
+    func nonDuplicate1(array: inout [Int]) -> [Int] {
         array.sort()
         var results: [Int] = []
         var i = 0
@@ -19,5 +19,15 @@ class NonDuplicate {
             i += 1
         }
         return results
+    }
+
+    func nonDuplicate2(array: inout [Int]) -> [Int] { 
+        var set: Set<Int> = Set<Int>()
+        var index = 0
+        while(index < array.count) {
+            set.insert(array[index])
+            index += 1
+        }
+        return Array(set)
     }
 }
