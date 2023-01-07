@@ -32,6 +32,6 @@ public class NonDuplicateArray {
     }
 
     public static int[] NonDuplicate3(int[] array) {
-        HashSet<int> set = new HashSet<int>(); return set.ToArray();
+        HashSet<int> set = new HashSet<int>(array); return set.ToArray();
     }
 }
