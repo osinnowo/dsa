@@ -9,8 +9,7 @@ public class MoveElementToRight {
                     int temp = array[left];
                     array[left] = array[right];
                     array[right] = temp;
-                    left++;
-                    right--;
+                    left++; right--;
                     break;
                 }
                 right--;
