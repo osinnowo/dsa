@@ -20,7 +20,7 @@ class MoveElementToRight {
 
     func moveElementToRight2(array: inout [Int], elementToMove: Int) -> [Int] {
         var left = 0
-        var right = 0
+        var right = array.count - 1
         while(left < right) {
             while(left < right && array[left] != elementToMove) { left += 1 }
             while(left < right && array[right] == elementToMove) { right -= 1}
@@ -28,5 +28,16 @@ class MoveElementToRight {
             left += 1; right -= 1;
         }
         return array
+    }
+
+    func moveElementToRight3(array: inout [Int], elementToMove: Int) -> [Int] {
+        var result = [Int]()
+        for element in array {
+            if(element == elementToMove) {
+                result.append(element); continue
+            }
+            result.insert(element, at: 0)
+        }
+        return result
     }
 }
