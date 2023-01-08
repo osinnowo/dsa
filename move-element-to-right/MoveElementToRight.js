@@ -26,4 +26,16 @@ function moveElementToRight1(array, elementToMove) {
     return array;
 }
 
+function moveElementToRight1(array, elementToMove) { 
+    const result = [];
+    for(const item of array) {
+        if(item === elementToMove) {
+            result.push(item);
+            continue;
+        }
+        result.unshift(item);
+    }
+    return result;
+}
+
 exports.moveElementToRight = moveElementToRight1;
