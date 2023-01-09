@@ -1,7 +1,7 @@
 import Foundation
 
-class MinimumDifference {
-    public func minimumDifference(array: inout [Int]) -> [[Int]] {
+class MinimumDifferencePair {
+    public func minimumDifferencePair(array: inout [Int]) -> [[Int]] {
         array.sort()
         var difference = array[1] - array[0]
         var results: [[Int]] = []

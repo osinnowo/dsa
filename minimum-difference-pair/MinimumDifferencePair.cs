@@ -1,5 +1,5 @@
 public class MinimumDifferencePair{
-    public static List<int[]> MinimumDifferencePair(int[] array)
+    public static List<int[]> minimumDifferencePair(int[] array)
     {
         Array.Sort(array);
         int minimumDifference = array[1] - array[0];
