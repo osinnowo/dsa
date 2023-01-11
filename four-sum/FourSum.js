@@ -1,5 +1,5 @@
 function fourSum(array, targetSum) {
-    array.sort();
+    array.sort((a, b) => a - b);
     const results = [];
     for(let i = 0; i < array.length; i++) {
         for(let j = i + 1; j < array.length; j++) {
