@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 public class Palindrome {
     public static bool IsPalindrome1(string str) 
     {
