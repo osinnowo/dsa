@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class ThreeNumberSums {
     public static List<int[]> ThreeNumbersSum(int[] array, int targetSum) {

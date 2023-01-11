@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class MinimumDifferencePair{
     public static List<int[]> minimumDifferencePair(int[] array)
     {
