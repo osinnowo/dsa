@@ -22,4 +22,13 @@ function firstNonRepeatingCharacter2(string) {
     return -1;
 }
 
+function firstNonRepeatingCharacter3(string) {
+    for(let index = 0; index < string.length; index++) {
+        if(string.indexOf(string[index]) === string.lastIndexOf(string[index])) {
+            return index;
+        }
+    }
+    return -1
+}
+
 exports.firstNonRepeatingCharacter = firstNonRepeatingCharacter;
