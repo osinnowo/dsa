@@ -26,4 +26,13 @@ class FirstNonRepeatingCharacter {
        }
        return -1
     }
+
+    public func firstNonRepeatingCharacter3(_ string: String) -> Int {
+        for (index, value) in string.enumerated() {
+            if(string.firstIndex(of: value) == string.lastIndex(of: value)) { 
+                return index 
+            }
+        }
+        return -1;
+    }
 }
