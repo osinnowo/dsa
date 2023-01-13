@@ -25,4 +25,13 @@ public class FirstNonRepeatingCharacter {
         }
         return -1;
     }
+
+    public int FirstNonRepeatingCharacter3(string str) {
+        for(int i = 0; i < str.Length; i++){
+            if(str.IndexOf(str[i]) == str.LastIndexOf(character)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
