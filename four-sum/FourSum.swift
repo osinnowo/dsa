@@ -2,7 +2,7 @@ import Foundation
 
 class FourSum {
     public func fourSum(array: inout [Int], targetSum: Int) -> [[Int]] {
-        array.sort{ $0 < $1}
+        array.sort{$0 < $1}
         var results: [[Int]] = []
         for i in stride(from: 0, to: array.count, by: 1) {
             for j in stride(from: i + 1, to: array.count, by: 1) {
