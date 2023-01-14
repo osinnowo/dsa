@@ -1,8 +1,8 @@
 using System;
-
+using System.Collections.Generic;
 public class ZeroSumSubArray
 {
-    public static bool ZeroSumSubArray(int[] array) {
+    public static bool ZeroSumSubArray1(int[] array) {
         if(array.Length == 1 && array[0] == 0) { return true; }
         int index = 1;
         while(index < array.Length) {
@@ -26,6 +26,17 @@ public class ZeroSumSubArray
             if(sum == 0) { return true; }
 
             index++;
+        }
+        return false;
+    }
+
+    public static bool ZeroSumSubArray2(int[] array) {
+        HashSet<int> set = new HashSet<int>();
+        int summation = 0;
+        foreach(var num in array) {
+            summation += num;
+            if(num == 0 || summation == 0 || set.Contains(summation)) { return true; }
+            set.Add(summation);
         }
         return false;
     }
