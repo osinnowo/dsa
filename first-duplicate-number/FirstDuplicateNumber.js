@@ -1,4 +1,4 @@
-function firstDuplicateNumber(array) {
+function firstDuplicateNumber1(array) {
     let map = new Map();
     for(let i = 0; i < array.length; i++) {
         const current = map.get(array[i]) ?? 0;
@@ -8,7 +8,7 @@ function firstDuplicateNumber(array) {
     return -1;
 }
 
-function firstDuplicateNumber(array) {
+function firstDuplicateNumber2(array) {
     let set = new Set();
     for(const arr of array) {
         if(set.has(arr)) { return arr; }
@@ -17,4 +17,4 @@ function firstDuplicateNumber(array) {
     return -1;
 }
 
-exports.firstDuplicateNumber = firstDuplicateNumber;
+exports.firstDuplicateNumber = firstDuplicateNumber1;
