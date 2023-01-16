@@ -18,12 +18,28 @@ public class LongestPalindromeString {
     }
 
     func isPalindrome(_ str: String) -> Bool {
-            let characters: [Character] = Array(str)
+        let characters: [Character] = Array(str)
             for i in stride(from: 0, to: characters.count / 2, by: 1) {
-                if(characters[i].lowercased() != characters[characters.count - i - 1].lowercased()) {
-                    return false
-                }
+            if(characters[i].lowercased() != characters[characters.count - i - 1].lowercased()) {
+                return false
             }
-            return true
+        }
+        return true
+    }
+
+    func isPalindrome(_ str: String, _ isOverloaded: Bool) -> Bool {
+        var leftPointer = 0
+        var rightPointer = str.count - 1
+        var leftIndex = str.index(str.startIndex, offsetBy: leftPointer)
+        var rightIndex = str.index(str.startIndex, offsetBy: rightPointer)
+
+        while(leftPointer < rightPointer) {
+            if(str[leftIndex] != str[rightIndex]) { return false }
+            leftPointer += 1; rightPointer -= 1;
+            leftIndex = str.index(str.startIndex, offsetBy: leftPointer)
+            rightIndex = str.index(str.startIndex, offsetBy: rightPointer)
+        }
+        
+        return true
     }
 }
