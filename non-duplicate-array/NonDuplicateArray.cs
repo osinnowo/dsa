@@ -8,11 +8,14 @@ public class NonDuplicateArray {
         for (int i = 0; i < array.Length; i++)
         {
             int distinctIndex = i;
+            bool isDuplicated = false;
             for (int j = i + 1; j < array.Length; j++)
             {
+                if(isDuplicated && array[distinctIndex] != array[j]) { break; }
                 if (array[distinctIndex] == array[j])
                 {
                     distinctIndex = j;
+                    isDuplicated = true;
                 }
             }
             results.Add(array[distinctIndex]);
