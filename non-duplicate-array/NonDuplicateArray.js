@@ -3,9 +3,12 @@ function nonDuplicate1(array) {
     array.sort((a, b) => a - b);
     for(let i = 0; i < array.length; i++) {
         let distinctIndex = i;
+        let isDuplicated = false;
         for(let j = i + 1; j < array.length; j++) {
+            if(isDuplicated && array[distinctIndex] !== array[j]) { break; }
             if(array[distinctIndex] === array[j]) {
                 distinctIndex = j;
+                isDuplicated = true;
             }
         }
         result.push(array[distinctIndex]);
