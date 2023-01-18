@@ -1,6 +1,7 @@
-public class InsertionSort {
+public class InsertionSort 
+{
     public static int[] InsertionSort1(int[] array) {
-        for(int i = 1; i < array.length; i++) {
+        for(int i = 1; i < array.Length; i++) {
             int j = i;
             while(j > 0 && array[j] < array[j - 1]) {
                 int temp = array[j];
