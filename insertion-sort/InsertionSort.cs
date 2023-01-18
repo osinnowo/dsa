@@ -14,9 +14,9 @@ public class InsertionSort
     }
 
     public static int[] InsertionSort2(int[] array) {
-         for(int i = array.Length - 2; i >= 0; i--) {
+         for(int i = array.length - 2; i >= 0; i--) {
             int j = i;
-            while(j <= array.Length - 2 && array[j] > array[j + 1]) {
+            while(j <= array.length - 2 && array[j] > array[j + 1]) {
                 int temp = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
