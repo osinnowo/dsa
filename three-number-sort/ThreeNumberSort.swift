@@ -19,7 +19,7 @@ class ThreeNumberSort {
         return array
     }
 
-    func threeNumberSort1(_ array: inout [Int], _ order: [Int]) -> [Int] {
+    func threeNumberSort2(_ array: inout [Int], _ order: [Int]) -> [Int] {
         var right = array.count - 1
         for index in stride(from: order.count - 1, through: 0, by: -1) {
             var left = 0
