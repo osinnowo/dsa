@@ -1,5 +1,5 @@
 import Foundation 
-class RemoveDupliateToArrayLeft {
+class RemoveDuplicateToArrayLeft {
     func removeDuplicateToArrayLeft(_ nums: inout [Int]) -> Int {
         var count = 1;
         for index in stride(from: 0, to: nums.count, by: 1) {
