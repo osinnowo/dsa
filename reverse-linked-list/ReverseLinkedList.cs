@@ -3,7 +3,7 @@ public class ReverseLinkedList {
         public int value;
         public LinkedList next;
         public LinkedList(int value, LinkedList next) {
-            this.value;
+            this.value = value;
             this.next = next;
         }
     }
