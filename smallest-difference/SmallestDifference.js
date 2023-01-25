@@ -11,10 +11,10 @@ function smallestDifference(arrayOne, arrayTwo) {
       let numTwo = arrayTwo[idxTwo];
       if(numOne < numTwo) {
         current = numTwo - numOne;
-        idxTwo++;
+        idxOne++;
       } else if (numTwo < numOne) {
         current = numOne - numTwo;
-        idxOne++;
+        idxTwo++;
       } else {
         return [numOne, numTwo];
       }
