@@ -3,7 +3,7 @@ import Foundation
 class SmallestDifference {
     func smallestDifference(arrayOne: [Int], arrayTwo: [Int]) -> [Int] {
         arrayOne.sort(); arrayTwo.sort()
-        var result = []
+        var result = [Int]()
         var idxOne = 0
         var idxTwo = 0
         var smallest = Int.max
