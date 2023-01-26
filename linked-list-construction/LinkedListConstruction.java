@@ -1,6 +1,4 @@
-import java.util.*;
-
-class LinkedListConstruction {
+public class LinkedListConstruction {
   static class DoublyLinkedList {
     public Node head;
     public Node tail;
