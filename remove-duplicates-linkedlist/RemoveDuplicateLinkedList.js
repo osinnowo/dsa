@@ -1,4 +1,4 @@
-class LinkedList {
+class RemoveDuplicateLinkedList {
     constructor(value) {
       this.value = value;
       this.next = null;
