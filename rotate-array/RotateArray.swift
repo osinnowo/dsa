@@ -1,7 +1,6 @@
 import Foundation
 
 class RotateArray {
-    // array [3, 2, 4, 1, 5, 6, 8, 9, 0, 7], times = 4
     func rotateArray1(_ array: [Int], _ times: Int) -> [Int] {
         var result = [Int]()
         var count = 0
