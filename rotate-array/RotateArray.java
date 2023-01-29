@@ -2,20 +2,20 @@ import java.util.*;
 
 public class RotateArray { 
     public int[] rotateArray1(int[] array, int times) {
-        int[] temp = new int[array.length];
+        int[] result = new int[array.length];
         int count = 0;
         
         for(int i = times; i < array.length; i++) {
-           temp[count] = array[i];
+           result[count] = array[i];
            count++;
         }
 
         for(int j = 0; j < times; j++) {
-            temp[count] = array[j];
+            result[count] = array[j];
             count++;
         }
 
-        return temp;
+        return result;
     }
 
     public int[] rotateArray2(int[] array, int times) {
