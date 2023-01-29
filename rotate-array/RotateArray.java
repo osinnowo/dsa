@@ -30,4 +30,15 @@ public class RotateArray {
         }
         return array;
     }
+
+    public int[] rotateArray3(int[] array, int times) {
+        for(int i = 0; i < times; i++) {
+            int firstItem = array[0];
+            for(int j = 0; j < array.length - 1; j++) {
+                array[j] = array[j + 1];
+            }
+            array[array.length - 1] = firstItem;
+        }
+        return array;
+     }
 }
