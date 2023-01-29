@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class ReversePolishNotation {
-    //["2", "1", "+", "3", "*"]
     public int reversePolishNotation(String[] notations) {
         Stack<Integer> stack = new Stack<>();
 
