@@ -7,19 +7,19 @@ class ReversePolishNotation {
         var operators = "+-*/"
         for notation in notations {
             if !operators.contains(notation) {
-                stack.append(notation); continue
+                stack.append(Int(notation)!); continue
             }
-            var first = stack.popLast()
-            var second = stack.popLast()
+            var first = stack.popLast()!
+            var second = stack.popLast()!
 
-            var index: Int = operators.firstIndex(of: notation)
+            var `operator`: Character = operators[operators.firstIndex(of: Character(notation))!]
 
-            switch index! {
-                case 0:
-                    result = first + second                
-                case 1:
+            switch `operator` {
+                case "+":
+                    result = first + second
+                case "-":
                     result = first - second
-                case 2:
+                case "*":
                     result = first * second
                 default:
                     result = first / second
