@@ -1,7 +1,7 @@
-import Foundation 
+import Foundation
 
 class ReversePolishNotation {
-    func reversePolishNotation(_ notations: String) -> Int {
+    func reversePolishNotation(_ notations: [String]) -> Int {
         var result = 0;
         var stack = [Int]()
         var operators = "+-*/"
@@ -24,7 +24,6 @@ class ReversePolishNotation {
                 default:
                     result = first / second
             }
-            
             stack.append(result)
         }
         return result;
