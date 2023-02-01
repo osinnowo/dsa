@@ -9,7 +9,6 @@ class Isomorphic {
         if(first == second) { return true }
         if(first.count == 1 && second.count == 1) { return true }
         
-        
         var dictionary: [Character: Character] = [:]
         var firstArray = Array(first)
         var secondArray = Array(second)
