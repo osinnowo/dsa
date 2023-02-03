@@ -13,4 +13,17 @@ class ArrayOfProduct {
         }
         return result
     }
+
+    func arrayOfProduct(_ array: [Int]) -> [Int] {
+        var result: [Int] = []
+        for (i, k) in array.enumerated() {
+            var temp = 1
+            for (j, m) in array.enumerated() {
+                if(i == j) { continue }
+                temp *= m
+            }
+            result.append(temp)
+        }
+        return result
+    }
 }
