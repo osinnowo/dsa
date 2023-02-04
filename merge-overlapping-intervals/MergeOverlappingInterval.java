@@ -5,8 +5,7 @@ public class MergeOverlappingInterval {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         final int START_TIME = 0;
         final int END_TIME = 1;
-        List<int[]> result = new ArrayList<>();
-        result.add(intervals[0]);
+        List<int[]> result = new ArrayList<>(); result.add(intervals[0]);
         for(int i = 1; i < intervals.length; i++) {
             int lastIntervalIndex = result.size() - 1;
             int[] current = intervals[i];
@@ -20,7 +19,6 @@ public class MergeOverlappingInterval {
             }
             result.add(current);
         }
-
         return result.toArray(new int[result.size()][]);
     }
 }
