@@ -21,7 +21,7 @@ class SpiralTraverse {
             }
 
             for row in stride(from: endRow - 1, to: startRow, by: -1) {
-                if startColumn == endColumn{ break }
+                if startColumn == endColumn { break }
                 result.append(array[row][startColumn])
             }
 
