@@ -13,7 +13,7 @@ var sumLinkedList = (linkedListOne, linkedListTwo) => {
         let two = (linkedListTwo != null) ? linkedListTwo.value : 0;
         let sum = one + two + carryOver;
 
-        let newNode = new Node(Math.floor(sum % 10));
+        let newNode = new Node(sum % 10);
         current.next = newNode;
         current = newNode;
 
