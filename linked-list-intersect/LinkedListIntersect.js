@@ -6,7 +6,6 @@ class Node {
 }
 exports.Node = Node;
 
-
 var intersectLinkedList = (linkedListOne, linkedListTwo) => {
     let set = new Set();
     let currentLinkedListOne = linkedListOne;
@@ -21,7 +20,7 @@ var intersectLinkedList = (linkedListOne, linkedListTwo) => {
         if(set.has(currentLinkedListTwo)) { return currentLinkedListTwo; }
         currentLinkedListTwo = currentLinkedListTwo.next
     }
-    
+
     return null;
 }   
 
