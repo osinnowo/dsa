@@ -1,11 +1,19 @@
 import Foundation  
 
-class LinkedListIntersect {
+class LinkedListIntersect: Hashable {
     class Node {
         var next: Node?
         var value: Int
         init(value: Int) {
             self.value = value
+        }
+
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(ObjectIdentifier(self).hashValue)
+        }
+
+        static func == (left: LinkedList, right: LinkedList) -> Bool {
+            return left === right
         }
     }
     func linkedListInstersect(_ linkedListOne: Node, _ linkedListTwo: Node) -> Node? {
