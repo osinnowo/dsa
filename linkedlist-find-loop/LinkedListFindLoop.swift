@@ -10,7 +10,7 @@ class LinkeListFindLoop {
     }
   }
 
-  func findLoop(head: Node) -> Node? {
+  func findLoopLinkedList(head: Node) -> Node? {
      var current: Node? = head
      while !current!.seen {
        current!.seen = true
