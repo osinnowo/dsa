@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MergeLinkedList {
+public class LinkedListIntersect {
     static class Node {
         public int value;
         public Node next;
@@ -8,7 +8,7 @@ public class MergeLinkedList {
             this.value = value;
         }
     }
-    public Node mergeLinkedLists(Node linkedListOne, Node linkedListTwo) {
+    public Node linkedListIntersect(Node linkedListOne, Node linkedListTwo) {
         Set<Node> linkedListNodes = new HashSet<>();
         Node currentLinkedListOne = linkedListOne;
 
