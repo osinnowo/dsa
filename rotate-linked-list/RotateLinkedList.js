@@ -10,13 +10,12 @@ var rotateLinkedList = (head, k) => {
     while(index <= k) {
         let current = head;
         let tail = null;
-        while(current != null) {
+        while(current !== null) {
             tail = current;
             current = current.next;
         }
-        let temp = head; next = temp.next;
-        temp.next = null; tail.next = temp;
-        head = next;
+        let next = head.next; head.next = null;
+        tail.next = head; head = next;
         index++;
     }
     return head;
