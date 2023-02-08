@@ -23,6 +23,6 @@ public class RotateLinkedList {
             tail!.next = linkedListHead; linkedListHead = next!;
             index += 1
          }
-         return linkedListHead
+         return linkedListHead!
     }
 }
