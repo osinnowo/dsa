@@ -10,7 +10,7 @@ class Node {
 var linkedListShift = (head, k) => {
     let tail = head;
     let length = 1;
-    while(tail.next != null) {
+    while(tail.next !== null) {
         length++;
         tail = tail.next;
     }
