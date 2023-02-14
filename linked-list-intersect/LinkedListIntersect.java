@@ -8,7 +8,7 @@ public class LinkedListIntersect {
             this.value = value;
         }
     }
-    public Node linkedListIntersect(Node linkedListOne, Node linkedListTwo) {
+    public Node linkedListIntersect1(Node linkedListOne, Node linkedListTwo) {
         Set<Node> linkedListNodes = new HashSet<>();
         Node currentLinkedListOne = linkedListOne;
 
@@ -24,5 +24,23 @@ public class LinkedListIntersect {
         }
         
         return null;
-      }
+    }
+
+    public Node linkedListIntersect2(Node linkedListOne, Node linkedListTwo) {
+        Node head1 = linkedListOne;
+        Map<Integer, Node> map = new HashMap<>();
+
+        while(head1 != null) {
+          map.put(head1.value, head1);
+          head1 = head1.next;
+        }
+
+        Node head2 = linkedListTwo;
+        while(head2 != null) {
+          if(map.containsKey(head2.value)) return head2;
+          head2 = head2.next;
+        }
+        
+        return null;
+    }
 }
