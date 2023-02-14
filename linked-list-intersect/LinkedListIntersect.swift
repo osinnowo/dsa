@@ -16,7 +16,7 @@ class LinkedListIntersect: Hashable {
             return left === right
         }
     }
-    func linkedListInstersect(_ linkedListOne: Node, _ linkedListTwo: Node) -> Node? {
+    func linkedListInstersect1(_ linkedListOne: Node, _ linkedListTwo: Node) -> Node? {
         var set: Set<Node> = []
         var currentLinkedListOne: Node? = linkedListOne
         while currentLinkedListOne != nil {
@@ -31,5 +31,22 @@ class LinkedListIntersect: Hashable {
         }
 
         return nil
+    }
+
+    func linkedListInstersect2(_ linkedListOne: Node, _ linkedListTwo: Node) -> Node? {
+        var dictionary: [Int : Node] = [:]
+        var head1: Node? = linkedListOne
+        while(head1 != nil) {
+            dictionary[head1!.value] = head1!
+            head1 = head1!.next
+        }
+
+        var head2: Node? = linkedListTwo
+        while(head2 != nil) {
+            let isContained = dictionary.contains { $0.key == head2!.value }
+            if(isContained) { return head2 }
+            head2 = head2!.next
+        }
+      return nil
     }
 }
