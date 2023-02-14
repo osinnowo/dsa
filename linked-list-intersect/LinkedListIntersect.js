@@ -6,7 +6,7 @@ class Node {
 }
 exports.Node = Node;
 
-var intersectLinkedList = (linkedListOne, linkedListTwo) => {
+var intersectLinkedList1 = (linkedListOne, linkedListTwo) => {
     let set = new Set();
     let currentLinkedListOne = linkedListOne;
     
@@ -23,5 +23,22 @@ var intersectLinkedList = (linkedListOne, linkedListTwo) => {
 
     return null;
 }   
+
+
+var intersectLinkedList2 = (linkedListOne, linkedListTwo) => {
+    const map = new Map();
+    let head1 = linkedListOne;
+    while(head1 !== null) {
+        map.set(head1.value, head1);
+        head1 = head1.next;
+    }
+
+    let head2 = linkedListTwo;
+    while(head2 !== null) {
+        if(map.has(head2.value)) { return head2 }
+        head2 = head2.next;
+    }
+    return null;
+}  
 
 exports.intersectLinkedList = this.intersectLinkedList;
