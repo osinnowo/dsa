@@ -3,20 +3,15 @@ import java.util.*;
 class GroupAnagram {
   public static ArrayList<List<String>> groupAnagrams(List<String> words) {
     Map<String, List<String>> map = new HashMap<>();
-    for(int i = 0; i < words.size(); i++) {
-      String word = sortString(words.get(i));
-      if(!map.containsKey(word)) {
-        map.put(word, new ArrayList<String>(Arrays.asList(words.get(i))));
+    for(var word: words) {
+      char[] characters = word.toCharArray(); Arrays.sort(characters);
+      String sortedWord = new String(characters);
+      if(!map.containsKey(sortedWord)) {
+        map.put(sortedWord, new ArrayList<String>(Arrays.asList(word)));
       } else {
-        map.get(word).add(words.get(i));
+        map.get(sortedWord).add(word);
       }
     }
     return new ArrayList<>(map.values());
-  }
-  
-  public static String sortString(String str) {
-    char[] characters = str.toCharArray();
-    Arrays.sort(characters);
-    return new String(characters);
   }
 }
