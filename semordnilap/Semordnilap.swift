@@ -3,7 +3,7 @@ import Foundation
 class Semordnilap {
     func semordnilap(_ words: [String]) -> [[String]] {
         var result: [[String]] = []
-        var dictionaries: Dictionary<String, Integer> = [:]
+        var dictionaries: Dictionary<String, Int> = [:]
         
         for index in stride(from: 0, to: words.count, by: 1) {
             let reversed = String(words[index].reversed())
