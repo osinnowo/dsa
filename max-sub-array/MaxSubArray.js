@@ -1,6 +1,6 @@
 /**
  * Maximum Sub-Array:                                              
- * This is a Java implementation of the Kadane's algorithm to find the maximum 
+ * This is a Javascript implementation of the Kadane's algorithm to find the maximum 
  * sum subarray in a given array of integers
  *
  * MIT License
@@ -25,14 +25,14 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.      
  */
 
- public class MaxSubArray {
-    public int maxSubArray(int[] nums) {
-        int maxSoFar = nums[0];
-        int maxEndingHere = nums[0];
-        for(int i = 1; i < nums.length; i++) {
-            maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
-            maxSoFar = Math.max(maxSoFar, maxEndingHere);
-        }
-        return maxSoFar;
+var maxSubArray = (nums) => {
+    let maxCurrent = nums[0];
+    let maxSoFar = nums[0];
+    for(let i = 1; i < nums.length; i++) {
+        maxCurrent = Math.max(maxCurrent + nums[i], nums[i]);
+        maxSoFar = Math.max(maxSoFar, maxCurrent);
     }
-} 
+    return maxSoFar;
+}
+
+exports.maxSubArray = maxSubArray;

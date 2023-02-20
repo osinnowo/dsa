@@ -1,6 +1,6 @@
 /**
  * Maximum Sub-Array:                                              
- * This is a Java implementation of the Kadane's algorithm to find the maximum 
+ * This is a C# implementation of the Kadane's algorithm to find the maximum 
  * sum subarray in a given array of integers
  *
  * MIT License
@@ -25,14 +25,17 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.      
  */
 
- public class MaxSubArray {
-    public int maxSubArray(int[] nums) {
-        int maxSoFar = nums[0];
-        int maxEndingHere = nums[0];
-        for(int i = 1; i < nums.length; i++) {
-            maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
-            maxSoFar = Math.max(maxSoFar, maxEndingHere);
+using System;
+
+public class MaxSubArray
+{
+    public int MaxSubArrays(int[] nums) {
+        int MaxSoFar = nums[0];
+        int MaxCurrent = nums[0];
+        for(int i = 1; i < nums.Length; i++) {
+            MaxCurrent = Math.Max(MaxCurrent + nums[i], nums[i]);
+            MaxSoFar = Math.Max(MaxCurrent, MaxSoFar);
         }
-        return maxSoFar;
+        return MaxSoFar;
     }
-} 
+}
