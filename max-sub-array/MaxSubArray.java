@@ -1,8 +1,7 @@
 /**
  * Maximum Sub-Array:                                              
- * This is a Java implementation of the maximum subarray algorithm. It takes an 
- * array of integers as input and returns the sum of the contiguous subarray with 
- * the largest sum.
+ * This is a Java implementation of the Kadane's algorithm to find the maximum 
+ * sum subarray in a given array of integers
  *
  * MIT License
  *
