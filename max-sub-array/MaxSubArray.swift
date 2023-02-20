@@ -1,6 +1,6 @@
 /**
  * Maximum Sub-Array:                                              
- * This is a Java implementation of the maximum subarray algorithm. It takes an 
+ * This is a Swift implementation of the maximum subarray algorithm. It takes an 
  * array of integers as input and returns the sum of the contiguous subarray with 
  * the largest sum.
  *
@@ -26,14 +26,16 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.      
  */
 
- public class MaxSubArray {
-    public int maxSubArray(int[] nums) {
-        int maxSoFar = nums[0];
-        int maxEndingHere = nums[0];
-        for(int i = 1; i < nums.length; i++) {
-            maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
-            maxSoFar = Math.max(maxSoFar, maxEndingHere);
+import Foundation {
+    class MaxSubArray {
+        func maxSubArray(_ nums: [Int]) -> Int {
+            var maxSoFar = nums[0]
+            var maxEndingHere = nums[0]
+            for index in stride(from: 1, to: nums.count, by: 1) {
+                maxEndingHere = max(maxEndingHere + nums[index], nums[index])
+                maxSoFar = max(maxSoFar, maxEndingHere)
+            }
+            return maxSoFar
         }
-        return maxSoFar;
     }
-} 
+}
