@@ -21,8 +21,7 @@ class QuickSort {
             int temp = array[right];
             array[right] = array[left];
             array[left] = temp;
-            left++;
-            right--;
+            left++; right--;
          }
       }
       quickSort(array, start, right);
