@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-class shortenPath {
+class ShortenPath {
   public static String shortenPath(String path) {
     boolean startsWithPath = path.charAt(0) == '/';
     String[] tokensArr = path.split("/");
