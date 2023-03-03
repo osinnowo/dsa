@@ -1,6 +1,7 @@
 import java.util.*;
 
 class LongestBalancedSubstring {
+  
   public int longestBalancedSubstring(String string) {
     int maxLength = 0;
     Stack<Integer> idxStack = new Stack<>();
