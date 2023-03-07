@@ -1,9 +1,9 @@
 import Foundation
 
 class Isomorphic {
-    // add -> egg
-    // foo -> bar
-    func isIsomorphic(_ first: String, _ second: String) -> Bool {
+    typealias Entry = (key: Character, value: Character)
+    
+    func isIsomorphic1(_ first: String, _ second: String) -> Bool {
         if(first.count == 0 || second.count == 0) { return false }
         if(first.count != second.count) { return false }
         if(first == second) { return true }
@@ -27,6 +27,36 @@ class Isomorphic {
             dictionary[charOne] = charTwo
         }
         return true
+    }
+
+    func isIsomorphic2(_ first: String, _ second: String) -> Bool {
+        var items: [Character: Character] = [:]
+        
+        for index in 0 ..< first.count {
+            var key = first[first.index(first.startIndex, offsetBy: index)]
+            var value = second[second.index(second.startIndex, offsetBy: index)]
+            var entry: Entry? = searchEntry(key, value, items)
+            
+            if let entry = entry {
+                if(entry.key == key && entry.value != value) {
+                    return false
+                } else if (entry.key != key && entry.value == value) {
+                    return false
+                }
+            } else {
+                items[key] = value
+            }
+        }
+        return true
+    }
+
+    func searchEntry(_ key: Character, _ value: Character, _ items: [Character: Character]) -> Entry? {
+        for item in items {
+            if(item.key == key || item.key == value || item.value == key || item.value == value) {
+                return item
+            }
+        }
+        return nil
     }
 
     func getKey(_ dictionary: [Character: Character], _ value: Character) -> Character? {
