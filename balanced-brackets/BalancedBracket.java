@@ -1,8 +1,6 @@
 import java.util.*;
 
-import java.util.*;
-
-class BalancedBracket {
+public class BalancedBracket {
   public static boolean balancedBrackets(String str) {
     String openingBrackets = "([{";
     String closingBrackets = ")]}";
