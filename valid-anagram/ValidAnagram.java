@@ -6,6 +6,12 @@ public class ValidAnagram {
         char[] sCharacters = s.toCharArray();
         char[] tCharacters = t.toCharArray();
 
-        return false;
+        Arrays.sort(sCharacters);
+        Arrays.sort(tCharacters);
+
+        String sWord = new String(sCharacters);
+        String tWord = new String(tCharacters);
+
+        return sWord.contentEquals(tWord);
     }
 }
