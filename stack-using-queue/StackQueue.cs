@@ -4,7 +4,7 @@ public class StackQueue {
 
     private List<int> list = new List<int>();
 
-    public MyStack() {}
+    public StackQueue() {}
     
     public void Push(int x) {
         this.list.Add(x);
