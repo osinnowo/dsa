@@ -3,9 +3,7 @@ using System.Collections.Generic;
 public class MyQueue {
     private List<int> list = new List<int>();
 
-    public MyQueue() {
-        
-    }
+    public MyQueue() { }
     
     public void Push(int x) {
         list.Add(x);
