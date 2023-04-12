@@ -1,9 +1,53 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2023 Osinnowo Emmanuel
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of 
+ * this software and associated documentation files (the "Software"), to deal in 
+ * the Software without restriction, including without limitation the rights to 
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
+ * of the Software, and to permit persons to whom the Software is furnished to do 
+ * so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all 
+ * copies or substantial portions of the Software.                                
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS 
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER 
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.      
+ *
+ *   
+ * ============================ 
+ * Description:
+ * ============================
+ * 205. Isomorphic Strings:
+ *
+ * Given two strings s and t, determine if they are isomorphic.
+ * Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+ * All occurrences of a character must be replaced with another character while preserving the 
+ * order of characters. No two characters may map to the same character, but a character may map to itself.
+ * 
+ * Example I:
+ * Input: s = "egg", t = "add"
+ * Output: true
+ * 
+ * Example II:
+ * Input: s = "foo", t = "bar"
+ * Output: false
+ *
+ * Example III:
+ * Input: s = "paper", t = "title"
+ * Output: true
+ **/
+
 import java.util.*;
 
 public class IsomorphicString {
-    // foo -> bar
-    // add -> egg
-    public boolean IsIsomorphic1(String first, String second) {
+    public boolean isIsomorphic1(String first, String second) {
         if(first == null || second == null) { return false; }
         if(first.length() != second.length()) { return false; }
         if(first.length() == 0 && second.length() == 0) { return true; }
@@ -28,7 +72,7 @@ public class IsomorphicString {
         return true;
     }
 
-    public boolean IsIsomorphic2(String first, String second) {
+    public boolean isIsomorphic2(String first, String second) {
         Map<Character, Character> map = new HashMap<>();
 
         for(int i = 0; i < first.length(); i++) {
