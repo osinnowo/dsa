@@ -1,5 +1,3 @@
-package second-smallest-number;
-
 public class SecondSmallestNumber {
     public static int findSecondSmallest(int[] nums) {
         int smallest = Integer.MAX_VALUE;
