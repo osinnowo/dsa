@@ -4,6 +4,7 @@ class InterleavingString:
         if len(s1) + len(s2) != len(s3):
             return False
         
+        
         # Create a dynamic programming table to store intermediate results
         dp = [[False] * (len(s2) + 1) for _ in range(len(s1) + 1)]
         
