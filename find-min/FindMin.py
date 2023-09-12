@@ -26,3 +26,4 @@ class Solution:
                 left = mid + 1
 
         return min_element
+
