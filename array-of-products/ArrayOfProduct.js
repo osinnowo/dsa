@@ -10,5 +10,4 @@ var arrayOfProducts = (array) => {
     }
     return result;
 }
-
 exports.arrayOfProducts = arrayOfProducts;
